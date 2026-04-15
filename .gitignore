@@ -1,0 +1,24 @@
+# PDF 源文件（太大）
+*.pdf
+
+# 提取的页面截图（太大，已有 img-*.jpg 替代）
+page_*.png
+
+# Python 脚本
+extract_pdf.py
+
+# macOS 系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.temp

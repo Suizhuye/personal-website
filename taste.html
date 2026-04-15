@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste | 汪洢静</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .influence-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .influence-card::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0;
+            height: 4px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .influence-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1); }
+        .influence-card:hover::before { opacity: 1; }
+
+        .kusama:hover::before { background: linear-gradient(90deg, #ff006e, #fb5607, #ffbe0b); }
+        .peii:hover::before { background: linear-gradient(90deg, #1a1a2e, #16213e, #0f3460); }
+        .monet:hover::before { background: linear-gradient(90deg, #74b9ff, #0984e3, #6c5ce7); }
+        .rams:hover::before { background: linear-gradient(90deg, #2d3436, #636e72, #b2bec3); }
+        .gaudi:hover::before { background: linear-gradient(90deg, #00b894, #00cec9, #81ecec); }
+
+        .style-block {
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .style-block:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 24px 48px -12px rgba(0,0,0,0.1); }
+
+        .quote-mark {
+            font-size: 72px;
+            line-height: 1;
+            opacity: 0.08;
+            font-family: Georgia, serif;
+            position: absolute;
+            top: -10px; left: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Wang<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="taste.html">Taste</a></li>
+            </ul>
+            <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <main class="page-container">
+
+        <!-- 页面标题 -->
+        <header class="mb-18 fade-in-element">
+            <p class="section-label">Design Philosophy & Influences</p>
+            <h1 class="section-title">My Design Taste</h1>
+            <p class="text-secondary mt-6 max-w-2xl text-base leading-relaxed">
+                设计不是凭空创造，而是站在巨人肩膀上的再发现。以下是我专业成长路上的坐标点——它们塑造了我看待世界的方式，也定义了我表达设计的方式。
+            </p>
+        </header>
+
+        <!-- ===== 专业背景 ===== -->
+        <section class="mb-20 fade-in-element">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center shadow-sm">
+                    <i class="fa fa-university text-accent text-sm"></i>
+                </span>
+                <h2 class="text-xl font-bold text-primary">Background</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl p-7 shadow-sm border border-zinc-100 hover:shadow-md transition-all duration-300 fade-in-left">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-50 to-purple-100 flex items-center justify-center">
+                            <i class="fa fa-graduation-cap text-accent"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-base">四川美术学院</p>
+                            <p class="text-xs text-accent font-medium">Sichuan Fine Arts Institute</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-pink-50/60 border border-pink-100/80">
+                            <span class="text-xs font-mono text-accent font-bold shrink-0 mt-0.5">2021 — 2026</span>
+                            <div>
+                                <p class="font-semibold text-sm text-primary">硕士 · 视觉传达设计</p>
+                                <p class="text-xs text-secondary mt-0.5">设计学 | Visual Communication Design</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-purple-50/60 border border-purple-100/80">
+                            <span class="text-xs font-mono text-purple-500 font-bold shrink-0 mt-0.5">2017 — 2021</span>
+                            <div>
+                                <p class="font-semibold text-sm text-primary">本科 · 设计历史与策划</p>
+                                <p class="text-xs text-secondary mt-0.5">设计学 | Design History & Planning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-7 shadow-sm border border-zinc-100 hover:shadow-md transition-all duration-300 fade-in-right relative overflow-hidden">
+                    <span class="quote-mark">&ldquo;</span>
+                    <h3 class="font-bold text-base mb-3 relative z-10">从史论到创作</h3>
+                    <p class="text-sm text-secondary leading-relaxed relative z-10">
+                        九年的川美时光，从<strong class="text-primary">设计史的宏观视野</strong>到<strong class="text-primary">视觉传达的微观实践</strong>，我的视角兼具学术深度与创意活力。设计史的学习让我理解风格演变的底层逻辑，而视觉创作的训练让我能将理论转化为可感知的设计语言。
+                    </p>
+                    <div class="mt-5 flex flex-wrap gap-2 relative z-10">
+                        <span class="tag">设计史研究</span>
+                        <span class="tag">视觉传达</span>
+                        <span class="tag">学术写作</span>
+                        <span class="tag">AIGC应用</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 设计风格 ===== -->
+        <section class="mb-20 fade-in-element">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-100 to-fuchsia-100 flex items-center justify-center shadow-sm">
+                    <i class="fa fa-paint-brush text-purple-500 text-sm"></i>
+                </span>
+                <h2 class="text-xl font-bold text-primary">Design Philosophy</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+                <!-- 新现代主义 -->
+                <div class="style-block bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-100 border border-slate-200/60 scale-in">
+                    <span class="quote-mark text-slate-400">&ldquo;</span>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <h3 class="text-lg font-bold text-primary">Neo-Modernism</h3>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded bg-slate-200/60 text-slate-600">新现代主义</span>
+                        </div>
+                        <p class="text-sm text-secondary leading-relaxed mb-5">
+                            简约几何 · 功能至上 · 克制装饰<br>
+                            少即是多，每一个元素都有存在的理由。
+                        </p>
+                        <div class="grid grid-cols-4 gap-2.5">
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-red-400 to-orange-400 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-blue-400 to-indigo-400 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-yellow-300 to-amber-400 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-emerald-400 to-teal-400 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-zinc-900 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-white border border-zinc-200 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-pink-300 to-rose-400 shadow-sm"></div>
+                            <div class="aspect-square rounded-lg bg-gradient-to-br from-cyan-300 to-blue-400 shadow-sm"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 波普艺术 -->
+                <div class="style-block bg-gradient-to-br from-fuchsia-50 via-pink-50 to-orange-50 border border-fuchsia-200/60 scale-in" style="transition-delay: 0.08s;">
+                    <span class="quote-mark text-fuchsia-300">&ldquo;</span>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <h3 class="text-lg font-bold text-primary">Pop Art</h3>
+                            <span class="text-xs font-mono px-2 py-0.5 rounded bg-fuchsia-200/60 text-fuchsia-700">波普艺术</span>
+                        </div>
+                        <p class="text-sm text-secondary leading-relaxed mb-5">
+                            大胆撞色 · 大众文化 · 幽默叛逆<br>
+                            让日常事物成为艺术的载体，用色彩打破沉闷。
+                        </p>
+                        <div class="grid grid-cols-4 gap-2.5">
+                            <div class="aspect-square rounded-lg bg-[#FF006E] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#FB5607] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#FFBE0B] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#8338EC] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#3A86FF] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#06D6A0] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#EF476F] shadow-md"></div>
+                            <div class="aspect-square rounded-lg bg-[#FFD166] shadow-md"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 影响者 ===== -->
+        <section class="mb-20 fade-in-element">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-rose-100 to-amber-100 flex items-center justify-center shadow-sm">
+                    <i class="fa fa-heart text-rose-500 text-sm"></i>
+                </span>
+                <h2 class="text-xl font-bold text-primary">Influences</h2>
+                <span class="text-xs text-zinc-400 ml-auto">塑造我设计观的人与作品</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 草间弥生 -->
+                <article class="influence-card kusama scale-in">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#ff006e] to-[#fb5607] flex items-center justify-center text-white font-bold text-sm shadow-md">YK</div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">草间弥生</h3>
+                            <p class="text-xs text-zinc-400">Yayoi Kusama</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-secondary leading-relaxed mb-4">
+                        无限圆点的执念者。她的作品将<strong class="text-[#ff006e]">重复的圆点符号</strong>转化为一种沉浸式的宇宙体验——从画布到装置再到建筑空间，无处不在的波点构成了她独特的视觉语言。
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-pink-50 text-pink-600 border border-pink-100">无限圆点</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 border border-orange-100">超现实沉浸</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-50 text-yellow-600 border border-yellow-100">强烈色彩</span>
+                    </div>
+                </article>
+
+                <!-- 贝聿铭 -->
+                <article class="influence-card peii scale-in" style="transition-delay: 0.06s;">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#1a1a2e] to-[#16213e] flex items-center justify-center text-white font-bold text-sm shadow-md">IP</div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">贝聿铭</h3>
+                            <p class="text-xs text-zinc-400">I.M. Pei</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-secondary leading-relaxed mb-4">
+                        几何纯粹主义的建筑诗人。<strong class="text-[#16213e]">三角形的卢浮宫金字塔</strong>、<strong class="text-[#16213e]">圆形的苏州博物馆</strong>——他用最基础的几何形态创造出最具东方哲思的空间诗篇。
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-slate-50 text-slate-600 border border-slate-200">几何纯粹</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">光影诗意</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">东方哲思</span>
+                    </div>
+                </article>
+
+                <!-- 莫奈 -->
+                <article class="influence-card monet scale-in" style="transition-delay: 0.12s;">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#74b9ff] to-[#0984e3] flex items-center justify-center text-white font-bold text-sm shadow-md">CM</div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">莫奈</h3>
+                            <p class="text-xs text-zinc-400">Claude Monet</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-secondary leading-relaxed mb-4">
+                        光影的捕手。<strong class="text-[#0984e3]">睡莲系列</strong>中水面的光影变化教会我：同一主题在不同时间、不同光线下可以呈现完全不同的面貌。印象派的<strong class="text-[#0984e3]">色彩层次感</strong>深深影响了我对配色的理解。
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-100">光影捕捉</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-50 text-cyan-600 border border-cyan-100">色彩层次</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100">印象氛围</span>
+                    </div>
+                </article>
+
+                <!-- 迪特·兰姆斯 -->
+                <article class="influence-card rams scale-in" style="transition-delay: 0.18s;">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#2d3436] to-[#636e72] flex items-center justify-center text-white font-bold text-sm shadow-md">DR</div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">迪特·兰姆斯</h3>
+                            <p class="text-xs text-zinc-400">Dieter Rams</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-secondary leading-relaxed mb-4">
+                        "少而好"（<strong class="text-[#2d3436]">Weniger, aber besser</strong>）的设计信条。他的<strong class="text-[#2d3436]">十大设计原则</strong>——好的设计是创新的、有用的、美观的、易懂的、内敛的、诚实的、持久的、细致的、环保的、尽可能少设计的——是我做每个项目时的内在标尺。
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-zinc-100 text-zinc-700 border border-zinc-200">功能美学</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-stone-50 text-stone-600 border border-stone-200">十大原则</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-neutral-50 text-neutral-600 border border-neutral-200">极简克制</span>
+                    </div>
+                </article>
+
+                <!-- 高迪 -->
+                <article class="influence-card gaudi scale-in" style="transition-delay: 0.24s;">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-[#00b894] to-[#00cec9] flex items-center justify-center text-white font-bold text-sm shadow-md">AG</div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">高迪</h3>
+                            <p class="text-xs text-zinc-400">Antoni Gaudí</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-secondary leading-relaxed mb-4">
+                        自然曲线的狂热信徒。<strong class="text-[#00b894]">圣家堂</strong>的有机结构让我明白：直线属于人类，曲线属于上帝。他从自然界汲取灵感——骨骼、树干、贝壳——将这些形态转化为建筑的灵魂。
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">有机曲线</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-teal-50 text-teal-600 border border-teal-100">自然灵感</span>
+                        <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-50 text-cyan-600 border border-cyan-100">细节狂热</span>
+                    </div>
+                </article>
+
+                <!-- 总结卡片 -->
+                <article class="scale-in" style="transition-delay: 0.30s;">
+                    <div class="h-full rounded-2xl p-7 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 border border-dashed border-pink-200/60 flex flex-col justify-center items-center text-center">
+                        <div class="w-14 h-14 rounded-2xl bg-white/80 backdrop-blur flex items-center justify-center mb-4 shadow-sm">
+                            <i class="fa fa-star text-accent text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-base text-primary mb-2">My Design DNA</h3>
+                        <p class="text-xs text-secondary leading-relaxed max-w-[220px]">
+                            从草间弥生的<strong class="text-accent">大胆色彩</strong>到兰姆斯的<strong class="text-accent">功能克制</strong>，从贝聿铭的<strong class="text-accent">几何秩序</strong>到高迪的<strong class="text-accent">有机自由</strong>——这些看似矛盾的元素在我的设计中达成和解。
+                        </p>
+                        <div class="mt-4 w-12 h-0.5 bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 rounded-full"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Wang Yijing &middot; Made with care in Chongqing</p>
+        <p class="smaller">Visual Communication Designer</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
