@@ -109,6 +109,32 @@
 [data-theme="dark"] .text-emerald-500 i { color: #34d399 !important; }
 [data-theme="dark"] .text-amber-500 i { color: #fbbf24 !important; }
 
+/* ===== 色彩样本保护（Taste页 Design Philosophy 的色块不受暗色模式覆盖） ===== */
+[data-theme="dark"] .style-block .aspect-square {
+    background: initial !important;
+    background-image: initial !important;
+}
+/* Neo-Modernism 渐变色块恢复 */
+[data-theme="dark"] .style-block .from-red-400 { background-image: linear-gradient(to bottom right, #f87171, #fb923c) !important; }
+[data-theme="dark"] .style-block .from-blue-400 { background-image: linear-gradient(to bottom right, #60a5fa, #818cf8) !important; }
+[data-theme="dark"] .style-block .from-yellow-300 { background-image: linear-gradient(to bottom right, #fde047, #fbbf24) !important; }
+[data-theme="dark"] .style-block .from-emerald-400 { background-image: linear-gradient(to bottom right, #34d399, #2dd4bf) !important; }
+[data-theme="dark"] .style-block .from-pink-300 { background-image: linear-gradient(to bottom right, #f9a8d4, #fb7185) !important; }
+[data-theme="dark"] .style-block .from-cyan-300 { background-image: linear-gradient(to bottom right, #67e8f9, #60a5fa) !important; }
+/* Neo-Modernism 纯色块恢复 */
+[data-theme="dark"] .style-block .bg-zinc-900.aspect-square { background-color: #18181b !important; background-image: none !important; }
+[data-theme="dark"] .style-block .bg-white.border.aspect-square { background-color: #ffffff !important; border-color: rgba(255,255,255,0.15) !important; }
+
+/* Pop Art 纯色块恢复 */
+[data-theme="dark"] .style-block .bg-\[\#FF006E\] { background-color: #FF006E !important; }
+[data-theme="dark"] .style-block .bg-\[\#FB5607\] { background-color: #FB5607 !important; }
+[data-theme="dark"] .style-block .bg-\[\#FFBE0B\] { background-color: #FFBE0B !important; }
+[data-theme="dark"] .style-block .bg-\[\#8338EC\] { background-color: #8338EC !important; }
+[data-theme="dark"] .style-block .bg-\[\#3A86FF\] { background-color: #3A86FF !important; }
+[data-theme="dark"] .style-block .bg-\[\#06D6A0\] { background-color: #06D6A0 !important; }
+[data-theme="dark"] .style-block .bg-\[\#EF476F\] { background-color: #EF476F !important; }
+[data-theme="dark"] .style-block .bg-\[\#FFD166\] { background-color: #FFD166 !important; }
+
 /* ===== 组件微调 ===== */
 [data-theme="dark"] .work-card,
 [data-theme="dark"] .stat-item,
