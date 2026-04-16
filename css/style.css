@@ -1031,8 +1031,7 @@ body {
 [data-theme="dark"] .from-slate-50, [data-theme="dark"] .to-gray-100,
 [data-theme="dark"] .from-fuchsia-50, [data-theme="dark"] .via-fuchsia-50,
 [data-theme="dark"] .to-pink-50 {
-    color: transparent !important;
-    -webkit-text-fill-color: unset !important;
+    /* 只覆盖背景渐变，不碰颜色 */
 }
 
 [data-theme="dark"] .bg-pink-50,
@@ -1141,3 +1140,69 @@ body {
 [data-theme="dark"] .bg-gradient-to-r.from-pink-50\/80 { background: rgba(var(--accent-rgb),0.05) !important; }
 
 [data-theme="dark"] .text-\[class\*=\"text-zinc-400\"\] { color: #8b8b94 !important; }
+
+/* ===== 暗色模式：图标保护（确保所有FA图标可见） ===== */
+[data-theme="dark"] i.fa,
+[data-theme="dark"] .fa {
+    opacity: 1 !important;
+    color: inherit !important;
+}
+[data-theme="dark"] .text-accent i,
+[data-theme="dark"] i.text-accent { color: var(--accent) !important; }
+[data-theme="dark"] .text-pink-500 i,
+[data-theme="dark"] i.text-pink-500 { color: #f472b6 !important; }
+[data-theme="dark"] .text-blue-500 i,
+[data-theme="dark"] i.text-blue-500 { color: #60a5fa !important; }
+[data-theme="dark"] .text-green-500 i,
+[data-theme="dark"] i.text-green-500 { color: #34d399 !important; }
+[data-theme="dark"] .text-purple-500 i,
+[data-theme="dark"] i.text-purple-500 { color: #c4b5fd !important; }
+[data-theme="dark"] .text-orange-500 i,
+[data-theme="dark"] i.text-orange-500 { color: #fb923c !important; }
+[data-theme="dark"] .text-cyan-500 i,
+[data-theme="dark"] i.text-cyan-500 { color: #67e8f9 !important; }
+[data-theme="dark"] .text-emerald-500 i,
+[data-theme="dark"] i.text-emerald-500 { color: #34d399 !important; }
+[data-theme="dark"] .text-amber-500 i,
+[data-theme="dark"] i.text-amber-500 { color: #fbbf24 !important; }
+
+/* 图标容器内的图标：暗色下保持可见 */
+[data-theme="dark"] [class*="from-pink-50"] i,
+[data-theme="dark"] [class*="from-blue-50"] i,
+[data-theme="dark"] [class*="from-purple-50"] i,
+[data-theme="dark"] [class*="from-green-50"] i,
+[data-theme="dark"] [class*="from-violet-50"] i,
+[data-theme="dark"] [class*="from-amber-50"] i,
+[data-theme="dark"] [class*="from-orange-50"] i,
+[data-theme="dark"] [class*="from-cyan-50"] i,
+[data-theme="dark"] [class*="from-emerald-50"] i,
+[data-theme="dark"] [class*="from-indigo-50"] i,
+[data-theme="dark"] .bg-gradient-to-br i,
+[data-theme="dark"] .bg-gradient-to-r i {
+    color: inherit !important;
+    opacity: 1 !important;
+}
+
+/* ===== 暗色模式：文字可读性增强 ===== */
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80 p,
+[data-theme="dark"] .bg-gradient-to-r.from-fuchsia-50\/60 p,
+[data-theme="dark"] .bg-gradient-to-r.from-pink-50\/80 p {
+    color: #d4d4d8 !important;
+}
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80 strong,
+[data-theme="dark"] .bg-gradient-to-r.from-fuchsia-50\/60 strong,
+[data-theme="dark"] .bg-gradient-to-r.from-pink-50\/80 strong {
+    color: #f4f4f5 !important;
+}
+
+/* Taste页：影响者卡片文字 + quote-mark */
+[data-theme="dark"] .influence-card p,
+[data-theme="dark"] .influence-card .text-sm {
+    color: #c4c4cc !important;
+}
+[data-theme="dark"] .influence-card strong {
+    color: #e4e4e7 !important;
+}
+[data-theme="dark"] .quote-mark {
+    opacity: 0.04;
+}
