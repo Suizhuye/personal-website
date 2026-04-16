@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>汪洢静 | 视觉传达设计师</title>
+    <meta name="description" content="汪洢静 — 四川美术学院视觉传达设计硕士，专注于品牌IP、文创设计、AIGC应用与学术研究。">
+    <meta property="og:title" content="汪洢静 | Visual Communication Designer">
+    <meta property="og:description" content="视觉传达设计师 · 设计研究者 — 在AI时代将创意转化为有温度的设计作品">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://Suizhuye.github.io/personal-website/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Lightbox 灯箱 -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close"><i class="fa fa-times"></i></button>
+            <button class="lightbox-nav lightbox-prev"><i class="fa fa-chevron-left"></i></button>
+            <img src="" alt="Preview">
+            <button class="lightbox-nav lightbox-next"><i class="fa fa-chevron-right"></i></button>
+            <span class="lightbox-counter">1 / 1</span>
+        </div>
+    </div>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" aria-label="回到顶部"><i class="fa fa-chevron-up"></i></button>
 
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -20,6 +40,9 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="taste.html">Taste</a></li>
             </ul>
+            <button class="theme-toggle" aria-label="切换主题">
+                <i class="fa fa-moon-o"></i><i class="fa fa-sun-o"></i>
+            </button>
             <button class="hamburger" aria-label="菜单">
                 <span></span><span></span><span></span>
             </button>
@@ -28,6 +51,8 @@
 
     <!-- Hero 主区域 -->
     <main class="page-container fade-in-element" id="hero">
+
+        <!-- 标签 + 标题 -->
         <div class="inline-block mb-4 px-4 py-1.5 bg-pink-50 rounded-full text-xs font-semibold text-accent uppercase tracking-widest float-anim">
             Visual Communication Designer · 2026
         </div>
@@ -36,65 +61,136 @@
             你好，我是汪洢静
         </h1>
 
-        <p class="text-xl text-secondary mb-6 max-w-2xl leading-relaxed">
-            视觉传达设计师 · 设计研究者<br>
-            <span class="text-base opacity-80">在 AI 时代，将扎实的设计功底与新技术结合，把创意转化为有温度的设计作品。</span>
+        <!-- 打字机效果 -->
+        <p class="text-xl text-secondary mb-2 max-w-2xl leading-relaxed">
+            <span id="typing-target" class="typing-text" data-texts='["视觉传达设计师 · 设计研究者","品牌 IP 设计师 · 文创设计探索者","AIGC 设计应用实践者 · 学术研究者"]'></span>
         </p>
 
-        <!-- 技能标签 -->
-        <div class="flex flex-wrap gap-2 mb-10 max-w-xl">
-            <span class="tag">视觉传达设计</span>
-            <span class="tag">品牌IP设计</span>
-            <span class="tag">文创设计</span>
-            <span class="tag">AIGC设计应用</span>
-            <span class="tag">学术研究</span>
-            <span class="tag">项目策划</span>
-        </div>
-
-        <!-- 个人陈述 -->
-        <p class="text-secondary max-w-2xl leading-relaxed mb-10 text-[15px]">
-            作为成长在 AI 时代的设计毕业生，我没有固化的工作思维，天然具备对新技术的快速适配能力。我既拥有四川美术学院多年培养的扎实设计功底与学术研究能力，也能快速将 AIGC 工具融入设计流程，用 AI 提效创意落地，为设计注入更多可能性。
+        <p class="text-secondary max-w-2xl leading-relaxed mb-10 text-[15px] opacity-80">
+            在 AI 时代，将扎实的设计功底与新技术结合，把创意转化为有温度的设计作品。
         </p>
 
-        <!-- 联系方式 -->
-        <div class="contact-card bg-white rounded-2xl p-6 shadow-lg border border-zinc-100 inline-block min-w-[340px] mb-14">
-            <h3 class="text-sm font-semibold text-accent uppercase tracking-wider mb-5 flex items-center gap-2">
-                <i class="fa fa-paper-plane"></i> 联系方式
-                <span class="flex-1 h-px bg-gradient-to-r from-pink-200 to-transparent ml-2"></span>
-            </h3>
-            <div class="space-y-3.5">
-                <a href="mailto:541403916@qq.com" class="flex items-center gap-3.5 text-secondary hover:text-primary transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center group-hover:from-pink-100 group-hover:to-pink-200 transition-all group-hover:scale-110 shadow-sm">
-                        <i class="fa fa-envelope text-accent text-sm"></i>
-                    </div>
-                    <div>
-                        <span class="text-sm font-medium block">541403916@qq.com</span>
-                        <span class="text-xs text-zinc-400">邮箱</span>
-                    </div>
-                </a>
-                <a href="tel:13364021634" class="flex items-center gap-3.5 text-secondary hover:text-primary transition-colors group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center group-hover:from-blue-100 group-hover:to-blue-200 transition-all group-hover:scale-110 shadow-sm">
-                        <i class="fa fa-phone text-blue-500 text-sm"></i>
-                    </div>
-                    <div>
-                        <span class="text-sm font-medium block">133-6402-1634</span>
-                        <span class="text-xs text-zinc-400">电话</span>
-                    </div>
-                </a>
-                <div class="flex items-center gap-3.5 text-secondary">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center shadow-sm">
-                        <i class="fa fa-map-marker text-green-500 text-sm"></i>
-                    </div>
-                    <div>
-                        <span class="text-sm font-medium block">重庆 · 中国</span>
-                        <span class="text-xs text-zinc-400">所在地</span>
-                    </div>
-                </div>
+        <!-- 数据统计条 -->
+        <div class="stats-bar fade-in-element">
+            <div class="stat-item">
+                <div class="stat-number" data-target="17" data-suffix="+">0</div>
+                <div class="stat-label">精选作品</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="10" data-suffix="+">0</div>
+                <div class="stat-label">学术论文</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="9" data-suffix="">0</div>
+                <div class="stat-label">年川美时光</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="5" data-suffix="">0</div>
+                <div class="stat-label">设计领域</div>
             </div>
         </div>
 
+        <!-- 精选作品展示区 -->
+        <section class="mb-16 fade-in-element">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center shadow-sm">
+                    <i class="fa fa-star text-accent text-sm"></i>
+                </span>
+                <h2 class="text-lg font-bold text-primary">Featured Works</h2>
+                <a href="portfolio.html" class="ml-auto text-sm text-accent hover:underline font-medium flex items-center gap-1">
+                    查看全部 <i class="fa fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+            <div class="hero-gallery">
+                <div class="hero-main-img">
+                    <img src="assets/images/img-001.jpg" alt="预防艾滋 医疗文创设计" loading="eager">
+                    <div class="gallery-overlay"><span>预防艾滋 · 医疗文创设计</span></div>
+                </div>
+                <div class="hero-sub-img">
+                    <img src="assets/images/img-014.jpg" alt="草莓音乐节视觉设计" loading="lazy">
+                    <div class="gallery-overlay"><span>草莓音乐节 · 活动视觉</span></div>
+                </div>
+                <div class="hero-sub-img">
+                    <img src="assets/images/img-009.jpg" alt="青春不定义 个人系列创作" loading="lazy">
+                    <div class="gallery-overlay"><span>青春不定义 · 个人创作</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能标签 + 简介 -->
+        <section class="mb-14 fade-in-element">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-100 to-fuchsia-100 flex items-center justify-center shadow-sm">
+                    <i class="fa fa-code text-purple-500 text-sm"></i>
+                </span>
+                <h2 class="text-lg font-bold text-primary">Skills & Expertise</h2>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-6 max-w-xl">
+                <span class="tag">视觉传达设计</span>
+                <span class="tag">品牌IP设计</span>
+                <span class="tag">文创设计</span>
+                <span class="tag">AIGC设计应用</span>
+                <span class="tag">学术研究</span>
+                <span class="tag">项目策划</span>
+                <span class="tag">海报设计</span>
+                <span class="tag">VI系统设计</span>
+                <span class="tag">包装设计</span>
+                <span class="tag">Logo设计</span>
+            </div>
+            <p class="text-secondary max-w-2xl leading-relaxed text-[15px]">
+                作为成长在 AI 时代的设计毕业生，我没有固化的工作思维，天然具备对新技术的快速适配能力。我既拥有四川美术学院多年培养的扎实设计功底与学术研究能力，也能快速将 AIGC 工具融入设计流程，用 AI 提效创意落地，为设计注入更多可能性。
+            </p>
+        </section>
+
+        <!-- 联系方式 + 社交链接 -->
+        <section class="mb-14 fade-in-element">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-pink-100 to-orange-100 flex items-center justify-center shadow-sm">
+                    <i class="fa fa-paper-plane text-accent text-sm"></i>
+                </span>
+                <h2 class="text-lg font-bold text-primary">Get In Touch</h2>
+            </div>
+            <div class="contact-card bg-white rounded-2xl p-6 shadow-lg border border-zinc-100 inline-block min-w-[360px] mb-4">
+                <div class="space-y-3.5">
+                    <a href="mailto:541403916@qq.com" class="flex items-center gap-3.5 text-secondary hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center group-hover:from-pink-100 group-hover:to-pink-200 transition-all group-hover:scale-110 shadow-sm">
+                            <i class="fa fa-envelope text-accent text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium block">541403916@qq.com</span>
+                            <span class="text-xs text-zinc-400">邮箱</span>
+                        </div>
+                    </a>
+                    <a href="tel:13364021634" class="flex items-center gap-3.5 text-secondary hover:text-primary transition-colors group">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center group-hover:from-blue-100 group-hover:to-blue-200 transition-all group-hover:scale-110 shadow-sm">
+                            <i class="fa fa-phone text-blue-500 text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium block">133-6402-1634</span>
+                            <span class="text-xs text-zinc-400">电话</span>
+                        </div>
+                    </a>
+                    <div class="flex items-center gap-3.5 text-secondary">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center shadow-sm">
+                            <i class="fa fa-map-marker text-green-500 text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm font-medium block">重庆 · 中国</span>
+                            <span class="text-xs text-zinc-400">所在地</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="mailto:541403916@qq.com" class="social-link email" title="Email"><i class="fa fa-envelope"></i></a>
+                    <a href="tel:13364021634" class="social-link phone" title="Phone"><i class="fa fa-phone"></i></a>
+                    <a href="#" class="social-link wechat" title="微信（待补充）"><i class="fa fa-weixin"></i></a>
+                    <a href="#" class="social-link location" title="地址"><i class="fa fa-map-marker"></i></a>
+                </div>
+            </div>
+        </section>
+
         <!-- 快捷入口 -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-4 fade-in-element">
             <a href="resume.html" class="group block p-6 bg-white rounded-2xl border border-zinc-100 hover:border-pink-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     <i class="fa fa-file-text-o text-accent text-lg"></i>
@@ -129,6 +225,12 @@
     <footer class="site-footer">
         <p>&copy; 2026 Wang Yijing &middot; Made with care in Chongqing</p>
         <p class="smaller">Visual Communication Designer</p>
+        <div class="footer-social">
+            <a href="mailto:541403916@qq.com" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="resume.html" title="Resume"><i class="fa fa-file-text-o"></i></a>
+            <a href="portfolio.html" title="Portfolio"><i class="fa fa-picture-o"></i></a>
+            <a href="taste.html" title="Taste"><i class="fa fa-heart-o"></i></a>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

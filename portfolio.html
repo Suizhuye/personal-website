@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | 汪洢静</title>
+    <meta name="description" content="汪洢静设计作品集 — 17个精选作品，涵盖医疗文创、品牌视觉、LOGO设计、商业海报等领域。">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="lightbox-close"><i class="fa fa-times"></i></button>
+            <button class="lightbox-nav lightbox-prev"><i class="fa fa-chevron-left"></i></button>
+            <img src="" alt="Preview">
+            <button class="lightbox-nav lightbox-next"><i class="fa fa-chevron-right"></i></button>
+            <span class="lightbox-counter">1 / 1</span>
+        </div>
+    </div>
+
+    <button class="back-to-top" aria-label="回到顶部"><i class="fa fa-chevron-up"></i></button>
 
     <nav class="navbar">
         <div class="nav-inner">
@@ -19,6 +34,9 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="taste.html">Taste</a></li>
             </ul>
+            <button class="theme-toggle" aria-label="切换主题">
+                <i class="fa fa-moon-o"></i><i class="fa fa-sun-o"></i>
+            </button>
             <button class="hamburger" aria-label="菜单"><span></span><span></span><span></span></button>
         </div>
     </nav>
@@ -27,18 +45,31 @@
         <header class="mb-16 fade-in-element">
             <p class="section-label">Selected Works</p>
             <h1 class="section-title">Portfolio</h1>
+            <p class="text-secondary mt-6 max-w-2xl text-base leading-relaxed">
+                从医疗文创到品牌视觉，从个人创作到商业海报 — 每一件作品都是对设计可能性的探索。
+            </p>
         </header>
 
+        <!-- 分类筛选 Tab -->
+        <div class="filter-tabs fade-in-element">
+            <button class="filter-tab active" data-filter="all">全部作品 (17)</button>
+            <button class="filter-tab" data-filter="medical">医疗文创 (3)</button>
+            <button class="filter-tab" data-filter="personal">个人创作 (2)</button>
+            <button class="filter-tab" data-filter="brand">品牌与活动 (6)</button>
+            <button class="filter-tab" data-filter="logo">标识LOGO (3)</button>
+            <button class="filter-tab" data-filter="commercial">商业海报 (3)</button>
+        </div>
+
         <!-- ========== 分类1：医疗文创设计 ========== -->
-        <section class="mb-24 fade-in-element">
-            <div class="flex items-center gap-3 mb-10">
-                <div class="cat-bar bg-gradient-to-b from-pink-400 to-red-500 shadow-sm shadow-pink-200"></div>
-                <h2 class="text-xl font-bold text-primary">医疗文创设计</h2>
-                <span class="text-xs font-mono text-secondary bg-pink-50 text-accent px-3 py-1.5 rounded-full ml-auto border border-pink-100">03 projects</span>
-            </div>
+        <section class="mb-24 fade-in-element" data-category="medical">
 
             <article class="work-card p-7 md:p-8 mb-10 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">《预防艾滋》医疗文创设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">《预防艾滋》医疗文创设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2025</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator</span>
+                    <span class="meta-chip"><i class="fa fa-trophy"></i> 入选川美研究生年展</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-pink-50 via-purple-50 to-pink-50 rounded-xl border-l-4 border-pink-400">
                     <h4 class="font-semibold text-sm mb-2 text-pink-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed">消解大众对艾滋病话题的病耻感，采用<strong class="text-pink-600">低饱和度温柔视觉</strong>搭配<strong class="text-pink-600">隐喻性图形设计</strong>，粉紫色调传递包容与关怀。入选四川美术学院研究生作品年展。</p>
@@ -48,11 +79,16 @@
                     <img src="assets/images/img-003.jpg" alt="血液传播" loading="lazy"><img src="assets/images/img-004.jpg" alt="注射传播" loading="lazy">
                     <img src="assets/images/img-005.jpg" alt="性传播" loading="lazy"><img src="assets/images/img-006.jpg" alt="延展设计" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">医疗文创</span><span class="tag">公益设计</span><span class="tag">海报设计</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">医疗文创</span><span class="tag">公益设计</span><span class="tag">海报设计</span><span class="tag">社会议题</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 mb-10 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">《爱护牙齿》医疗健康海报设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">《爱护牙齿》医疗健康海报设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2025</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator / Midjourney</span>
+                    <span class="meta-chip"><i class="fa fa-user"></i> 儿童护牙科普项目</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-l-4 border-blue-400">
                     <h4 class="font-semibold text-sm mb-2 text-blue-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed">针对儿童护牙科普痛点，采用<strong class="text-blue-600">软萌视觉风格</strong>+<strong class="text-blue-600">明亮活泼配色</strong>，将专业知识转化为易懂有趣的视觉符号。</p>
@@ -60,11 +96,15 @@
                 <div class="image-gallery">
                     <img src="assets/images/img-007.jpg" alt="主海报" loading="lazy"><img src="assets/images/img-008.jpg" alt="系列海报" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">医疗文创</span><span class="tag">IP设计</span><span class="tag">儿童设计</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">医疗文创</span><span class="tag">IP设计</span><span class="tag">儿童设计</span><span class="tag">AIGC辅助</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">关注厌食症 / 健康饮食系列海报</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">关注厌食症 / 健康饮食系列海报</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2024</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Procreate</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-400">
                     <h4 class="font-semibold text-sm mb-2 text-green-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-green-600">高对比度撞色设计</strong>制造视觉冲击力，食物与药丸结合隐喻"不要用药物替代食物"。</p>
@@ -77,15 +117,15 @@
         </section>
 
         <!-- ========== 分类2：个人系列创作 ========== -->
-        <section class="mb-24 fade-in-element">
-            <div class="flex items-center gap-3 mb-10">
-                <div class="cat-bar bg-gradient-to-b from-purple-400 to-indigo-500 shadow-sm shadow-purple-200"></div>
-                <h2 class="text-xl font-bold text-primary">个人系列创作</h2>
-                <span class="text-xs font-mono text-secondary bg-purple-50 text-purple-500 px-3 py-1.5 rounded-full ml-auto border border-purple-100">02 projects</span>
-            </div>
+        <section class="mb-24 fade-in-element" data-category="personal">
 
             <article class="work-card p-7 md:p-8 mb-10 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">《青春不定义》个人系列创作</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">《青春不定义》个人系列创作</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2023</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator / Figma</span>
+                    <span class="meta-chip"><i class="fa fa-star"></i> 导师项目 · 个人代表作</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-400">
                     <h4 class="font-semibold text-sm mb-2 text-purple-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed">关注年轻女性自我认同议题，用<strong class="text-purple-600">多元松弛的视觉表达</strong>传递"女性无需被标签定义"。紫绿撞色体现青春活力与反叛精神。</p>
@@ -93,11 +133,16 @@
                 <div class="image-gallery">
                     <img src="assets/images/img-009.jpg" alt="主视觉" loading="lazy"><img src="assets/images/img-010.jpg" alt="系列延展" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">个人创作</span><span class="tag">主题创作</span><span class="tag">女性主义</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">个人创作</span><span class="tag">主题创作</span><span class="tag">女性主义</span><span class="tag">插画</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">光盘行动 — 创造美好生活</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">光盘行动 — 创造美好生活</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2023</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator</span>
+                    <span class="meta-chip"><i class="fa fa-leaf"></i> 公益主题</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-500">
                     <h4 class="font-semibold text-sm mb-2 text-blue-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-blue-600">蓝白红高对比配色</strong>打造公益海报，堆叠餐盘骨骼化处理形成强烈视觉冲击。</p>
@@ -105,20 +150,20 @@
                 <div class="image-gallery">
                     <img src="assets/images/img-011.jpg" alt="光盘行动" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">公益设计</span><span class="tag">环保主题</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">公益设计</span><span class="tag">环保主题</span><span class="tag">海报设计</span></div>
             </article>
         </section>
 
         <!-- ========== 分类3：品牌与活动视觉设计 ========== -->
-        <section class="mb-24 fade-in-element">
-            <div class="flex items-center gap-3 mb-10">
-                <div class="cat-bar bg-gradient-to-b from-orange-400 to-red-500 shadow-sm shadow-orange-200"></div>
-                <h2 class="text-xl font-bold text-primary">品牌与活动视觉设计</h2>
-                <span class="text-xs font-mono text-secondary bg-orange-50 text-orange-500 px-3 py-1.5 rounded-full ml-auto border border-orange-100">06 projects</span>
-            </div>
+        <section class="mb-24 fade-in-element" data-category="brand">
 
             <article class="work-card p-7 md:p-8 mb-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">重庆长江草莓音乐节视觉设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">重庆长江草莓音乐节视觉设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2024</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator / After Effects</span>
+                    <span class="meta-chip"><i class="fa fa-music"></i> 草莓音乐节官方合作</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-red-50 to-pink-50 rounded-xl border-l-4 border-red-400">
                     <h4 class="font-semibold text-sm mb-2 text-red-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed">以<strong class="text-red-600">草莓元素为核心符号</strong>，红蓝绿高饱和撞色营造年轻活力氛围。延展涵盖手提袋、专辑封面、入场券等。</p>
@@ -126,11 +171,16 @@
                 <div class="image-gallery">
                     <img src="assets/images/img-014.jpg" alt="主海报" loading="lazy"><img src="assets/images/img-015.jpg" alt="延展物料" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">活动视觉</span><span class="tag">音乐节设计</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">活动视觉</span><span class="tag">音乐节设计</span><span class="tag">物料系统</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 mb-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">「栅山茶陶展」展览视觉系统</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">「栅山茶陶展」展览视觉系统</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2024</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / InDesign / Figma</span>
+                    <span class="meta-chip"><i class="fa fa-image"></i> 全套VI + 展览物料</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-green-50 to-yellow-50 rounded-xl border-l-4 border-green-500">
                     <h4 class="font-semibold text-sm mb-2 text-green-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed">绿黄粉三色碰撞构建前卫艺术感，几何图案+大胆字体排版营造后现代主义氛围。全套物料含画册、工作证等。</p>
@@ -140,11 +190,16 @@
                     <img src="assets/images/img-021.jpg" alt="工作证A" loading="lazy"><img src="assets/images/img-022.jpg" alt="主海报" loading="lazy">
                     <img src="assets/images/img-023.jpg" alt="工作证B" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">展览设计</span><span class="tag">VI系统</span><span class="tag">画册设计</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">展览设计</span><span class="tag">VI系统</span><span class="tag">画册设计</span><span class="tag">后现代风格</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 mb-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">「感知教育」品牌VI设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">「感知教育」品牌VI设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2024</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Illustrator / Figma / C4D</span>
+                    <span class="meta-chip"><i class="fa fa-graduation-cap"></i> 教育品牌全案</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-teal-50 to-pink-50 rounded-xl border-l-4 border-teal-400">
                     <h4 class="font-semibold text-sm mb-2 text-teal-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-teal-600">"感知"字体图形化设计</strong>，融入爱心圆点等亲和元素。全套VI涵盖画册、名片、文具、服装等全方位场景。</p>
@@ -154,21 +209,31 @@
                     <img src="assets/images/img-026.jpg" alt="工作证B" loading="lazy"><img src="assets/images/img-027.jpg" alt="VI全套" loading="lazy">
                     <img src="assets/images/img-028.jpg" alt="画册" loading="lazy"><img src="assets/images/img-029.jpg" alt="画册展示" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">品牌VI</span><span class="tag">教育品牌</span><span class="tag">物料系统</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">品牌VI</span><span class="tag">教育品牌</span><span class="tag">物料系统</span><span class="tag">字体设计</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 mb-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">「果淘奶茶」品牌视觉设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">「果淘奶茶」品牌视觉设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2023</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator / Procreate</span>
+                    <span class="meta-chip"><i class="fa fa-coffee"></i> 餐饮品牌</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-yellow-50 to-red-50 rounded-xl border-l-4 border-yellow-400">
                     <h4 class="font-semibold text-sm mb-2 text-yellow-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-yellow-600">趣味字体设计</strong>+水果元素插画，传递年轻活力调性。延展包括杯套、包装袋、名片、海报等。</p>
                 </div>
                 <div class="image-gallery"><img src="assets/images/img-030.jpg" alt="全套物料" loading="lazy"></div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">餐饮品牌</span><span class="tag">包装设计</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">餐饮品牌</span><span class="tag">包装设计</span><span class="tag">插画设计</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 mb-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">「洋洋」乡村振兴农产品品牌设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">「洋洋」乡村振兴农产品品牌设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2023</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator / Figma / C4D</span>
+                    <span class="meta-chip"><i class="fa fa-leaf"></i> 乡村振兴项目</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-red-50 to-green-50 rounded-xl border-l-4 border-red-500">
                     <h4 class="font-semibold text-sm mb-2 text-red-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-red-600">圆润可爱字体设计</strong>+番茄农作物元素。全套包装涵盖瓶装、袋装、APP图标等。</p>
@@ -179,30 +244,35 @@
                     <img src="assets/images/img-038.jpg" alt="包装阵列" loading="lazy"><img src="assets/images/img-039.jpg" alt="工作证" loading="lazy">
                     <img src="assets/images/img-040.jpg" alt="APP图标" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">农产品品牌</span><span class="tag">乡村振兴</span><span class="tag">包装设计</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">农产品品牌</span><span class="tag">乡村振兴</span><span class="tag">包装设计</span><span class="tag">APP设计</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">「老国货」品牌复兴视觉设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">「老国货」品牌复兴视觉设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2023</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator</span>
+                    <span class="meta-chip"><i class="fa fa-diamond"></i> 国潮复兴</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-purple-50 to-red-50 rounded-xl border-l-4 border-purple-400">
                     <h4 class="font-semibold text-sm mb-2 text-purple-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-purple-600">复古与现代结合的字体设计</strong>+中式边框纹样，保留文化底蕴同时注入时尚感。</p>
                 </div>
                 <div class="image-gallery"><img src="assets/images/img-033.jpg" alt="T恤设计" loading="lazy"></div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">国潮设计</span><span class="tag">品牌复兴</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">国潮设计</span><span class="tag">品牌复兴</span><span class="tag">T恤设计</span></div>
             </article>
         </section>
 
         <!-- ========== 分类4：标识与LOGO设计 ========== -->
-        <section class="mb-24 fade-in-element">
-            <div class="flex items-center gap-3 mb-10">
-                <div class="cat-bar bg-gradient-to-b from-cyan-400 to-blue-500 shadow-sm shadow-cyan-200"></div>
-                <h2 class="text-xl font-bold text-primary">标识与LOGO设计</h2>
-                <span class="text-xs font-mono text-secondary bg-cyan-50 text-cyan-500 px-3 py-1.5 rounded-full ml-auto border border-cyan-100">03 projects</span>
-            </div>
+        <section class="mb-24 fade-in-element" data-category="logo">
 
             <article class="work-card p-7 md:p-8 mb-10 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">重庆电视台LOGO重新设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">重庆电视台LOGO重新设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2023</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Illustrator / Figma</span>
+                    <span class="meta-chip"><i class="fa fa-tv"></i> 媒体机构 · 导师项目</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-slate-50 to-gray-100 rounded-xl border-l-4 border-slate-500">
                     <h4 class="font-semibold text-sm mb-2 text-slate-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed">结合重庆"<strong class="text-slate-600">山城、江城</strong>"特质融入山水抽象线条。漩涡形态象征长江嘉陵江交汇；山茶花造型代表市花；CQ字母缩写强调现代传媒属性。</p>
@@ -211,11 +281,16 @@
                     <img src="assets/images/img-016.jpg" alt="方案A" loading="lazy"><img src="assets/images/img-017.jpg" alt="其他方案" loading="lazy">
                     <img src="assets/images/img-018.jpg" alt="多彩方案" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">Logo设计</span><span class="tag">媒体视觉</span><span class="tag">城市IP</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">Logo设计</span><span class="tag">媒体视觉</span><span class="tag">城市IP</span><span class="tag">抽象图形</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">其他品牌标识设计</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">其他品牌标识设计</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2022-2024</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Illustrator / Figma</span>
+                    <span class="meta-chip"><i class="fa fa-tags"></i> 多品牌Logo合集</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-cyan-50 to-emerald-50 rounded-xl border-l-4 border-cyan-400">
                     <h4 class="font-semibold text-sm mb-2 text-cyan-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-cyan-600">馆藏企画展</strong>几何方块拼接抽象形态；<strong class="text-cyan-600">竺科技</strong>V字形传递科技创新感；<strong class="text-cyan-600">炽悦家政</strong>钻石形外框体现专业可靠。</p>
@@ -223,30 +298,35 @@
                 <div class="image-gallery">
                     <img src="assets/images/img-017.jpg" alt="馆藏&竺科技" loading="lazy"><img src="assets/images/img-055.jpg" alt="炽悦家政" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">Logo设计</span><span class="tag">品牌识别</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">Logo设计</span><span class="tag">品牌识别</span><span class="tag">科技/家政/文化</span></div>
             </article>
         </section>
 
         <!-- ========== 分类5：商业广告与海报 ========== -->
-        <section class="mb-24 fade-in-element">
-            <div class="flex items-center gap-3 mb-10">
-                <div class="cat-bar bg-gradient-to-b from-gray-400 to-zinc-600 shadow-sm"></div>
-                <h2 class="text-xl font-bold text-primary">商业广告与海报</h2>
-                <span class="text-xs font-mono text-secondary bg-zinc-100 text-zinc-500 px-3 py-1.5 rounded-full ml-auto border border-zinc-200">03 projects</span>
-            </div>
+        <section class="mb-24 fade-in-element" data-category="commercial">
 
             <article class="work-card p-7 md:p-8 mb-10 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">长江流域生态保护公益海报</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">长江流域生态保护公益海报</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2025</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Midjourney</span>
+                    <span class="meta-chip"><i class="fa fa-leaf"></i> 生态保护主题</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-pink-50 to-zinc-100 rounded-xl border-l-4 border-pink-400">
                     <h4 class="font-semibold text-sm mb-2 text-pink-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-pink-600">粉黑高对比配色</strong>营造警示效果，水生生物扁平化剪影风格处理，中英双语排版增强国际传播力。</p>
                 </div>
                 <div class="image-gallery"><img src="assets/images/img-041.jpg" alt="生态保护" loading="lazy"></div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">公益海报</span><span class="tag">生态保护</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">公益海报</span><span class="tag">生态保护</span><span class="tag">AIGC辅助</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 mb-10 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">M·A·C 化妆品广告海报</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">M·A·C 化妆品广告海报</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2024</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Procreate / Midjourney</span>
+                    <span class="meta-chip"><i class="fa fa-diamond"></i> 美妆品牌广告</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-red-50 to-pink-50 rounded-xl border-l-4 border-red-500">
                     <h4 class="font-semibold text-sm mb-2 text-red-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-red-600">口红膏体痕迹为核心视觉</strong>，红色背景与白色LOGO极致对比，樱花水彩注入柔美气息。</p>
@@ -255,17 +335,22 @@
                     <img src="assets/images/img-042.jpg" alt="MAC主视觉" loading="lazy"><img src="assets/images/img-043.jpg" alt="口红系列" loading="lazy">
                     <img src="assets/images/img-050.jpg" alt="樱花限定" loading="lazy">
                 </div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">美妆广告</span><span class="tag">品牌海报</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">美妆广告</span><span class="tag">品牌海报</span><span class="tag">商业摄影合成</span></div>
             </article>
 
             <article class="work-card p-7 md:p-8 scale-in">
-                <h3 class="text-xl font-bold mb-3 text-primary">2025高考加油 · 放手去搏</h3>
+                <h3 class="text-xl font-bold mb-2 text-primary">2025高考加油 · 放手去搏</h3>
+                <div class="work-meta">
+                    <span class="meta-chip"><i class="fa fa-calendar"></i> 2025</span>
+                    <span class="meta-chip"><i class="fa fa-paint-brush"></i> Photoshop / Illustrator</span>
+                    <span class="meta-chip"><i class="fa fa-heart"></i> 情感营销</span>
+                </div>
                 <div class="mb-5 p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border-l-4 border-orange-400">
                     <h4 class="font-semibold text-sm mb-2 text-orange-700"><i class="fa fa-lightbulb-o mr-2"></i>设计理念</h4>
                     <p class="text-sm text-secondary leading-relaxed"><strong class="text-orange-600">温暖教室场景+亲情对话气泡</strong>传递家庭关爱力量。"放手去搏 | 家是你的归宿"既是鼓励也是承诺。</p>
                 </div>
                 <div class="image-gallery"><img src="assets/images/img-070.jpg" alt="高考加油" loading="lazy"></div>
-                <div class="mt-5 flex flex-wrap"><span class="tag">情感营销</span><span class="tag">正能量</span></div>
+                <div class="mt-5 flex flex-wrap"><span class="tag">情感营销</span><span class="tag">正能量</span><span class="tag">海报设计</span></div>
             </article>
         </section>
     </main>
@@ -273,6 +358,11 @@
     <footer class="site-footer">
         <p>&copy; 2026 Wang Yijing &middot; Made with care in Chongqing</p>
         <p class="smaller">Visual Communication Designer</p>
+        <div class="footer-social">
+            <a href="mailto:541403916@qq.com" title="Email"><i class="fa fa-envelope"></i></a>
+            <a href="index.html" title="Home"><i class="fa fa-home"></i></a>
+            <a href="portfolio.html" title="Portfolio"><i class="fa fa-picture-o"></i></a>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
