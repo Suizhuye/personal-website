@@ -1206,3 +1206,92 @@ body {
 [data-theme="dark"] .quote-mark {
     opacity: 0.04;
 }
+
+/* ===== 暗色模式：截图中3个问题的精确修复 ===== */
+
+/* 问题1：Skills底部渐变区（带透明度修饰符的完整渐变） */
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80.via-fuchsia-50\/60.to-pink-50\/80 {
+    background: var(--card-bg) !important;
+    border-color: rgba(255,255,255,0.08) !important;
+}
+/* 渐变区内所有子元素文字 */
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80 * {
+    color: #c4c4cc !important;
+}
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80 strong {
+    color: #e4e4e7 !important;
+}
+/* 渐变区内的tag标签 */
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80 .tag {
+    background: rgba(255,255,255,0.08) !important;
+    color: #a1a1aa !important;
+    border-color: rgba(255,255,255,0.1) !important;
+}
+[data-theme="dark"] .bg-gradient-to-r.from-violet-50\/80 .tag:hover {
+    background: rgba(var(--accent-rgb), 0.15) !important;
+    color: var(--accent) !important;
+}
+
+/* 问题2：Taste页 Background 区 — 图标容器（from-100系列） */
+[data-theme="dark"] .bg-gradient-to-br.from-pink-100.to-purple-100,
+[data-theme="dark"] .bg-gradient-to-br.from-pink-50.to-purple-100,
+[data-theme="dark"] .bg-gradient-to-br.from-violet-100.to-fuchsia-100,
+[data-theme="dark"] .bg-gradient-to-br.from-rose-100.to-amber-100,
+[data-theme="dark"] [class*="from-pink-100"],
+[data-theme="dark"] [class*="to-purple-100"],
+[data-theme="dark"] [class*="to-fuchsia-100"],
+[data-theme="dark"] [class*="to-amber-100"] {
+    background: rgba(255,255,255,0.06) !important;
+}
+/* 时间标签（带透明度） */
+[data-theme="dark"] .bg-pink-50\/60,
+[data-theme="dark"] .bg-purple-50\/60,
+[data-theme="dark"] [class*="bg-pink-50\/6"],
+[data-theme="dark"] [class*="bg-purple-50\/6"] {
+    background: rgba(255,255,255,0.06) !important;
+}
+[data-theme="dark"] .border-pink-100\/80,
+[data-theme="dark"] .border-purple-100\/80,
+[data-theme="dark"] [class*="border-pink-100\/8"],
+[data-theme="dark"] [class*="border-purple-100\/8"] {
+    border-color: rgba(255,255,255,0.08) !important;
+}
+
+/* 问题3：My Design DNA 卡片 */
+[data-theme="dark"] .bg-gradient-to-br.from-pink-50.via-purple-50.to-blue-50 {
+    background: var(--card-bg) !important;
+    border-color: rgba(255,255,255,0.08) !important;
+}
+/* 星星图标容器 */
+[data-theme="dark"] .bg-white\/80.backdrop-blur,
+[data-theme="dark"] [class*="bg-white\/8"] {
+    background: rgba(255,255,255,0.08) !important;
+}
+/* 分隔线 */
+[data-theme="dark"] .bg-gradient-to-r.from-pink-300.via-purple-300.to-blue-300 {
+    background: linear-gradient(to right, rgba(var(--accent-rgb),0.3), rgba(139,92,246,0.3), rgba(96,165,250,0.3)) !important;
+}
+/* My Design DNA 文字 */
+[data-theme="dark"] .bg-gradient-to-br.from-pink-50.via-purple-50.to-blue-50 p {
+    color: #b4b4bc !important;
+}
+[data-theme="dark"] .bg-gradient-to-br.from-pink-50.via-purple-50.to-blue-50 strong {
+    color: #d4d4d8 !important;
+}
+
+/* ===== 暗色模式：通用兜底 — 所有含 from-50/to-50/via-50 的渐变容器 ===== */
+[data-theme="dark"] [class*="from-pink-50"][class*="to-"],
+[data-theme="dark"] [class*="from-blue-50"][class*="to-"],
+[data-theme="dark"] [class*="from-purple-50"][class*="to-"],
+[data-theme="dark"] [class*="from-green-50"][class*="to-"],
+[data-theme="dark"] [class*="from-violet-50"][class*="to-"],
+[data-theme="dark"] [class*="from-amber-50"][class*="to-"],
+[data-theme="dark"] [class*="from-orange-50"][class*="to-"],
+[data-theme="dark"] [class*="from-cyan-50"][class*="to-"],
+[data-theme="dark"] [class*="from-emerald-50"][class*="to-"],
+[data-theme="dark"] [class*="from-indigo-50"][class*="to-"],
+[data-theme="dark"] [class*="from-red-50"][class*="to-"],
+[data-theme="dark"] [class*="from-slate-50"][class*="to-"],
+[data-theme="dark"] [class*="from-fuchsia-50"][class*="to-"] {
+    background: var(--card-bg) !important;
+}
