@@ -142,80 +142,100 @@
             </p>
         </section>
 
-        <!-- 联系方式 + 社交链接 -->
-        <section class="mb-14 fade-in-element">
-            <div class="flex items-center gap-3 mb-6">
-                <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-pink-100 to-orange-100 flex items-center justify-center shadow-sm">
-                    <i class="fa fa-paper-plane text-accent text-sm"></i>
-                </span>
-                <h2 class="text-lg font-bold text-primary">Get In Touch</h2>
-            </div>
-            <div class="contact-card bg-white rounded-2xl p-6 shadow-lg border border-zinc-100 inline-block min-w-[360px] mb-4">
-                <div class="space-y-3.5">
-                    <a href="mailto:541403916@qq.com" class="flex items-center gap-3.5 text-secondary hover:text-primary transition-colors group">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center group-hover:from-pink-100 group-hover:to-pink-200 transition-all group-hover:scale-110 shadow-sm">
-                            <i class="fa fa-envelope text-accent text-sm"></i>
+        <!-- CTA 联系区（全宽双栏布局） -->
+        <section class="fade-in-element">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+
+                <!-- 左侧：联系信息（占3列） -->
+                <div class="lg:col-span-3 bg-white rounded-2xl p-8 shadow-sm border border-zinc-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-pink-50 via-purple-50 to-transparent rounded-bl-full opacity-60"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-7">
+                            <span class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-100 to-orange-100 flex items-center justify-center shadow-sm">
+                                <i class="fa fa-paper-plane text-accent"></i>
+                            </span>
+                            <div>
+                                <h2 class="text-lg font-bold text-primary">Get In Touch</h2>
+                                <p class="text-xs text-zinc-400">期待与你合作</p>
+                            </div>
                         </div>
-                        <div>
-                            <span class="text-sm font-medium block">541403916@qq.com</span>
-                            <span class="text-xs text-zinc-400">邮箱</span>
-                        </div>
-                    </a>
-                    <a href="tel:13364021634" class="flex items-center gap-3.5 text-secondary hover:text-primary transition-colors group">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center group-hover:from-blue-100 group-hover:to-blue-200 transition-all group-hover:scale-110 shadow-sm">
-                            <i class="fa fa-phone text-blue-500 text-sm"></i>
-                        </div>
-                        <div>
-                            <span class="text-sm font-medium block">133-6402-1634</span>
-                            <span class="text-xs text-zinc-400">电话</span>
-                        </div>
-                    </a>
-                    <div class="flex items-center gap-3.5 text-secondary">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center shadow-sm">
-                            <i class="fa fa-map-marker text-green-500 text-sm"></i>
-                        </div>
-                        <div>
-                            <span class="text-sm font-medium block">重庆 · 中国</span>
-                            <span class="text-xs text-zinc-400">所在地</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3.5 text-secondary pt-1 border-t border-dashed border-zinc-100 mt-3">
-                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-50 to-purple-100 flex items-center justify-center shadow-sm">
-                            <i class="fa fa-plane text-purple-500 text-sm"></i>
-                        </div>
-                        <div>
-                            <span class="text-sm font-medium block">江浙沪优先</span>
-                            <span class="text-xs text-zinc-400">期望工作地</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <a href="mailto:541403916@qq.com" class="group flex items-center gap-4 p-4 rounded-xl hover:bg-pink-50/60 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm shrink-0">
+                                    <i class="fa fa-envelope text-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary group-hover:text-accent transition-colors">541403916@qq.com</p>
+                                    <p class="text-xs text-zinc-400 mt-0.5">邮箱</p>
+                                </div>
+                            </a>
+                            <a href="tel:13364021634" class="group flex items-center gap-4 p-4 rounded-xl hover:bg-blue-50/60 transition-all duration-300">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm shrink-0">
+                                    <i class="fa fa-phone text-blue-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary group-hover:text-blue-500 transition-colors">133-6402-1634</p>
+                                    <p class="text-xs text-zinc-400 mt-0.5">电话</p>
+                                </div>
+                            </a>
+                            <div class="flex items-center gap-4 p-4 rounded-xl">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center shadow-sm shrink-0">
+                                    <i class="fa fa-map-marker text-green-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">重庆 · 中国</p>
+                                    <p class="text-xs text-zinc-400 mt-0.5">所在地</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 rounded-xl">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-50 to-purple-100 flex items-center justify-center shadow-sm shrink-0">
+                                    <i class="fa fa-plane text-purple-500"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-primary">江浙沪优先</p>
+                                    <p class="text-xs text-zinc-400 mt-0.5">期望工作地</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 右侧：快捷入口（占2列） -->
+                <div class="lg:col-span-2 flex flex-col gap-4">
+                    <a href="resume.html" class="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-zinc-100 hover:border-pink-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0" style="width:52px;height:52px;">
+                            <i class="fa fa-file-text-o text-accent text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">Resume</h3>
+                            <p class="text-xs text-secondary mt-0.5">教育背景 / 经历 / 奖项</p>
+                        </div>
+                        <i class="fa fa-chevron-right text-zinc-300 ml-auto group-hover:text-accent group-hover:translate-x-1 transition-all text-sm"></i>
+                    </a>
+                    <a href="portfolio.html" class="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-zinc-100 hover:border-purple-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0" style="width:52px;height:52px;">
+                            <i class="fa fa-picture-o text-purple-500 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">Portfolio</h3>
+                            <p class="text-xs text-secondary mt-0.5">17 个精选作品 / 5 大分类</p>
+                        </div>
+                        <i class="fa fa-chevron-right text-zinc-300 ml-auto group-hover:text-purple-500 group-hover:translate-x-1 transition-all text-sm"></i>
+                    </a>
+                    <a href="taste.html" class="group flex items-center gap-4 p-5 bg-white rounded-2xl border border-zinc-100 hover:border-cyan-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0" style="width:52px;height:52px;">
+                            <i class="fa fa-heart-o text-cyan-500 text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-base text-primary">Taste</h3>
+                            <p class="text-xs text-secondary mt-0.5">设计风格 / 灵感来源 / 影响</p>
+                        </div>
+                        <i class="fa fa-chevron-right text-zinc-300 ml-auto group-hover:text-cyan-500 group-hover:translate-x-1 transition-all text-sm"></i>
+                    </a>
+                </div>
+
             </div>
         </section>
-
-        <!-- 快捷入口 -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 fade-in-element max-w-[860px] mx-auto">
-            <a href="resume.html" class="group block p-6 bg-white rounded-2xl border border-zinc-100 hover:border-pink-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa fa-file-text-o text-accent text-lg"></i>
-                </div>
-                <h3 class="font-bold text-base mb-1">Resume</h3>
-                <p class="text-xs text-secondary">教育背景 / 经历 / 奖项</p>
-            </a>
-            <a href="portfolio.html" class="group block p-6 bg-white rounded-2xl border border-zinc-100 hover:border-purple-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa fa-picture-o text-purple-500 text-lg"></i>
-                </div>
-                <h3 class="font-bold text-base mb-1">Portfolio</h3>
-                <p class="text-xs text-secondary">17 个精选作品 / 5 大分类</p>
-            </a>
-            <a href="taste.html" class="group block p-6 bg-white rounded-2xl border border-zinc-100 hover:border-cyan-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fa fa-heart-o text-cyan-500 text-lg"></i>
-                </div>
-                <h3 class="font-bold text-base mb-1">Taste</h3>
-                <p class="text-xs text-secondary">设计风格 / 灵感来源 / 影响</p>
-            </a>
-        </div>
     </main>
 
     <footer class="site-footer">
