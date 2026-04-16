@@ -117,29 +117,89 @@
             </div>
         </section>
 
-        <!-- 技能标签 + 简介 -->
+        <!-- 技能专长（卡片网格布局） -->
         <section class="mb-14 fade-in-element">
-            <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center gap-3 mb-8">
                 <span class="w-9 h-9 rounded-xl bg-gradient-to-br from-violet-100 to-fuchsia-100 flex items-center justify-center shadow-sm">
                     <i class="fa fa-code text-purple-500 text-sm"></i>
                 </span>
-                <h2 class="text-lg font-bold text-primary">Skills & Expertise</h2>
+                <div>
+                    <h2 class="text-lg font-bold text-primary">Skills & Expertise</h2>
+                    <p class="text-xs text-zinc-400 mt-0.5">9年川美训练 × AI时代设计能力</p>
+                </div>
             </div>
-            <div class="flex flex-wrap gap-2 mb-6 max-w-xl">
-                <span class="tag">视觉传达设计</span>
-                <span class="tag">品牌IP设计</span>
-                <span class="tag">文创设计</span>
-                <span class="tag">AIGC设计应用</span>
-                <span class="tag">学术研究</span>
-                <span class="tag">项目策划</span>
-                <span class="tag">海报设计</span>
-                <span class="tag">VI系统设计</span>
-                <span class="tag">包装设计</span>
-                <span class="tag">Logo设计</span>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                <div class="group p-5 bg-white rounded-2xl border border-zinc-100 hover:border-pink-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa fa-paint-brush text-accent text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-sm text-primary">视觉传达设计</h3>
+                    </div>
+                    <p class="text-xs text-secondary leading-relaxed">品牌IP、文创产品、海报视觉、包装系统的全流程创意与执行</p>
+                </div>
+
+                <div class="group p-5 bg-white rounded-2xl border border-zinc-100 hover:border-purple-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa fa-magic text-purple-500 text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-sm text-primary">AIGC 设计应用</h3>
+                    </div>
+                    <p class="text-xs text-secondary leading-relaxed">Midjourney / Stable Diffusion 融入设计流程，AI提效创意落地</p>
+                </div>
+
+                <div class="group p-5 bg-white rounded-2xl border border-zinc-100 hover:border-blue-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa fa-object-group text-blue-500 text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-sm text-primary">VI & 品牌系统</h3>
+                    </div>
+                    <p class="text-xs text-secondary leading-relaxed">从Logo到完整VI系统，涵盖画册、名片、物料、APP图标等全场景</p>
+                </div>
+
+                <div class="group p-5 bg-white rounded-2xl border border-zinc-100 hover:border-emerald-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa fa-book text-emerald-500 text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-sm text-primary">学术研究与写作</h3>
+                    </div>
+                    <p class="text-xs text-secondary leading-relaxed">发表北大核心/AMI期刊论文10余篇，设计史论与批评研究能力扎实</p>
+                </div>
+
+                <div class="group p-5 bg-white rounded-2xl border border-zinc-100 hover:border-orange-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa fa-image text-orange-500 text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-sm text-primary">活动视觉策划</h3>
+                    </div>
+                    <p class="text-xs text-secondary leading-relaxed">音乐节、展览、论坛等活动的主视觉及延展物料系统化设计</p>
+                </div>
+
+                <div class="group p-5 bg-white rounded-2xl border border-zinc-100 hover:border-cyan-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-50 to-blue-50 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fa fa-pencil-square text-cyan-500 text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-sm text-primary">插画与手绘</h3>
+                    </div>
+                    <p class="text-xs text-secondary leading-relaxed">Procreate / Photoshop 手绘创作，个人系列作品探索视觉表达边界</p>
+                </div>
             </div>
-            <p class="text-secondary max-w-2xl leading-relaxed text-[15px]">
-                作为成长在 AI 时代的设计毕业生，我没有固化的工作思维，天然具备对新技术的快速适配能力。我既拥有四川美术学院多年培养的扎实设计功底与学术研究能力，也能快速将 AIGC 工具融入设计流程，用 AI 提效创意落地，为设计注入更多可能性。
-            </p>
+
+            <div class="bg-gradient-to-r from-violet-50/80 via-fuchsia-50/60 to-pink-50/80 rounded-2xl p-6 border border-violet-100/60 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-accent/8 via-transparent to-transparent rounded-full blur-2xl"></div>
+                <p class="text-[15px] text-secondary leading-relaxed relative z-10">
+                    作为成长在 <strong class="text-primary">AI 时代</strong>的设计毕业生，我没有固化的工作思维，天然具备对新技术的快速适配能力。我既拥有四川美术学院多年培养的<strong class="text-primary">扎实设计功底</strong>与<strong class="text-primary">学术研究能力</strong>（10+篇论文），也能快速将 AIGC 工具融入设计流程，用 AI 提效创意落地，为设计注入更多可能性。
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4 relative z-10">
+                    <span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">Figma</span><span class="tag">Midjourney</span><span class="tag">After Effects</span><span class="tag">InDesign</span><span class="tag">Procreate</span><span class="tag">C4D</span>
+                </div>
+            </div>
         </section>
 
         <!-- CTA 联系区（全宽双栏布局） -->
