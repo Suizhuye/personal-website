@@ -880,7 +880,7 @@ body {
 .download-btn i { font-size: 15px; }
 
 /* ===== 设计理念框（暗色适配） ===== */
-.work-card .bg-gradient-to-r {
+[data-theme="dark"] .work-card .bg-gradient-to-r {
     background: var(--code-bg) !important;
     border-left-color: var(--accent) !important;
 }

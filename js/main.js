@@ -77,7 +77,7 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0x' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
         $$('.fade-in-element, .fade-in-left, .fade-in-right, .scale-in').forEach(el => observer.observe(el));
 
@@ -272,15 +272,7 @@
         });
     }
 
-    initTheme();
-    initNavbar();
-    initAnimations();
-    initTypingEffect();
-    initStatsCounter();
-    initSkillBars();
-    initLightbox();
-    initTabFilter();
-    initBackToTop();
-    initSmoothLinks();
+    const inits = [initTheme, initNavbar, initAnimations, initTypingEffect, initStatsCounter, initSkillBars, initLightbox, initTabFilter, initBackToTop, initSmoothLinks];
+    inits.forEach(fn => { try { fn(); } catch(e) { console.warn('[Init] ' + (fn.name || 'anonymous') + ':', e.message); } });
 
 })();
